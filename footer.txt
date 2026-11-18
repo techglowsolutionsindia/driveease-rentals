@@ -1,0 +1,134 @@
+    <!-- ==================================================
+         09. GLOBAL FOOTER START
+    ================================================== -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- FOOTER BRAND START -->
+
+        <div class="footer-brand">
+          <a
+            href="#home"
+            class="footer-brand-link"
+            aria-label="DriveEase Rentals - Back to top"
+          >
+            <img
+              src="assets/images/logo/favicon.svg"
+              alt=""
+              class="footer-brand-icon"
+              width="48"
+              height="48"
+            />
+
+            <img
+              src="assets/images/logo/business-logo.svg"
+              alt="DriveEase Rentals"
+              class="footer-brand-logo"
+              width="180"
+            />
+          </a>
+
+          <p class="footer-tagline">Your Journey, Our Drive.</p>
+
+          <p class="footer-description">
+            DriveEase Rentals provides convenient, reliable, and affordable car
+            rental services in Andheri West, Mumbai. With a selection of
+            well-maintained vehicles, flexible rental options, and
+            customer-focused service, we make every journey comfortable,
+            convenient, and hassle-free.
+          </p>
+        </div>
+
+        <!-- FOOTER BRAND END -->
+
+        <!-- FOOTER QUICK LINKS START -->
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <h2 class="footer-heading">Quick Links</h2>
+
+          <ul class="footer-links">
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+
+            <li>
+              <a href="#fleet">Our Fleet</a>
+            </li>
+
+            <li>
+              <a href="#services">Services</a>
+            </li>
+
+            <li>
+              <a href="#why-choose-us">Why Choose Us</a>
+            </li>
+
+            <li>
+              <a href="#how-it-works">How It Works</a>
+            </li>
+
+            <li>
+              <a href="#pricing">Pricing</a>
+            </li>
+
+            <li>
+              <a href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- FOOTER QUICK LINKS END -->
+
+        <!-- FOOTER CONTACT START -->
+
+        <div class="footer-contact">
+          <h2 class="footer-heading">Contact Information</h2>
+
+          <p class="footer-demo-notice">Demonstration contact information</p>
+
+          <address class="footer-contact-details">
+            <p>Andheri West, Mumbai, Maharashtra, India</p>
+
+            <p>
+              <a href="tel:+919000012345"> +91 90000 12345 </a>
+            </p>
+
+            <p>
+              <a href="mailto:contact@driveeaserentals.example">
+                contact@driveeaserentals.example
+              </a>
+            </p>
+          </address>
+
+          <div class="footer-business-hours">
+            <h3 class="footer-subheading">Business Hours</h3>
+
+            <p>Monday–Sunday: 8:00 AM–10:00 PM</p>
+          </div>
+        </div>
+
+        <!-- FOOTER CONTACT END -->
+      </div>
+
+      <!-- FOOTER BOTTOM BAR START -->
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2026 DriveEase Rentals. All rights reserved.
+        </p>
+
+        <!--
+                Privacy Policy: PENDING
+                Terms & Conditions: PENDING
+
+                Add legal links only after their
+                destinations have been confirmed.
+            -->
+      </div>
+
+      <!-- FOOTER BOTTOM BAR END -->
+    </footer>
+
+    <!-- ==================================================
+         09. GLOBAL FOOTER END
+    ================================================== -->

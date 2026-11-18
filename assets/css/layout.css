@@ -1,0 +1,36 @@
+/* Shared layout primitives; not section design. */
+.container,
+.header-container,
+.footer-container,
+.footer-bottom {
+  width: min(100% - 2 * var(--page-gutter), var(--container-width));
+  margin-inline: auto;
+}
+.section {
+  scroll-margin-top: 88px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.button-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+.button-primary:hover {
+  color: var(--color-accent-contrast);
+  filter: brightness(0.93);
+}
+
+/* 07–08. PRICING AND TESTIMONIALS SCROLL FIX */
+#pricing,
+#testimonials {
+  scroll-margin-top: 88px;
+}

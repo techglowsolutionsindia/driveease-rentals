@@ -1,0 +1,890 @@
+/* ==================================================
+   01. FLEET PAGE DESIGN VARIABLES START
+================================================== */
+#fleet-page {
+  --fleet-navy: #071f3c;
+  --fleet-orange: #ff6500;
+  --fleet-orange-dark: #e95600;
+  --fleet-muted: #526176;
+  --fleet-border: #e3e8ef;
+  --fleet-white: #ffffff;
+  --fleet-shadow: 0 3px 12px rgba(8, 30, 58, 0.08);
+}
+
+#fleet-page *,
+#fleet-page *::before,
+#fleet-page *::after {
+  box-sizing: border-box;
+}
+
+#fleet-page #main-content {
+  display: block;
+  min-height: 0;
+}
+
+#fleet-page button,
+#fleet-page input,
+#fleet-page select {
+  font: inherit;
+}
+
+#fleet-page button {
+  cursor: pointer;
+}
+
+#fleet-page [hidden] {
+  display: none !important;
+}
+/* ==================================================
+   01. FLEET PAGE DESIGN VARIABLES END
+================================================== */
+
+/* ==================================================
+   02. FLEET HERO SECTION START
+================================================== */
+#fleet-page .fleet-hero-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 330px;
+  margin: 0;
+  padding: 26px 24px 20px;
+  background-color: #062340;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(2, 24, 48, 0.35) 0%,
+      rgba(2, 24, 48, 0.12) 42%,
+      transparent 75%
+    ),
+    url("../images/fleet/hero/fleet-hero.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--fleet-white);
+}
+
+#fleet-page .fleet-hero-container {
+  width: min(100%, 1320px);
+  min-height: 284px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+#fleet-page .fleet-hero-content {
+  max-width: 540px;
+}
+
+#fleet-page .fleet-hero-title {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(36px, 4.2vw, 62px);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.02;
+  letter-spacing: -1.8px;
+}
+
+#fleet-page .fleet-hero-title span {
+  display: block;
+  color: #ff8b2b;
+}
+
+#fleet-page .fleet-hero-description {
+  max-width: 450px;
+  margin: 12px 0 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* ==================================================
+   02.01 FLEET SEARCH FORM START
+================================================== */
+#fleet-page .fleet-search-form {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#fleet-page .fleet-search-field {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-height: 56px;
+  padding: 8px 14px;
+  border: 1px solid var(--fleet-border);
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(8, 30, 58, 0.06);
+}
+
+#fleet-page .fleet-search-field label {
+  margin: 0;
+  color: var(--fleet-navy);
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+#fleet-page .fleet-search-field select,
+#fleet-page .fleet-search-field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline-offset: 3px;
+  background: transparent;
+  color: var(--fleet-navy);
+  font-size: 13px;
+  font-weight: 550;
+}
+
+#fleet-page .fleet-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 56px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(180deg, #ff9c32, #ff6500);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 750;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+#fleet-page .fleet-search-button span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+#fleet-page .fleet-search-button:hover {
+  background: var(--fleet-orange-dark);
+  transform: translateY(-1px);
+}
+
+#fleet-page .fleet-search-message {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #a32616;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#fleet-page .fleet-search-message:empty {
+  display: none;
+}
+/* ==================================================
+   02.01 FLEET SEARCH FORM END
+================================================== */
+
+/* ==================================================
+   02. FLEET HERO SECTION END
+================================================== */
+
+/* ==================================================
+   03. FLEET GALLERY SECTION START
+================================================== */
+#fleet-page .fleet-gallery-section {
+  width: 100%;
+  margin: 0;
+  padding: 28px 24px 38px;
+  background: #fff;
+  color: var(--fleet-navy);
+}
+
+#fleet-page .fleet-gallery-container {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+}
+
+#fleet-page .fleet-section-heading {
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+#fleet-page .fleet-section-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 5px;
+  color: var(--fleet-navy);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+#fleet-page .fleet-section-eyebrow::before,
+#fleet-page .fleet-section-eyebrow::after {
+  content: "";
+  width: 42px;
+  height: 3px;
+  border-radius: 4px;
+  background: var(--fleet-orange);
+}
+
+#fleet-page .fleet-section-heading h2 {
+  margin: 0;
+  color: var(--fleet-navy);
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+#fleet-page .fleet-section-heading h2::after {
+  content: "";
+  display: block;
+  width: 62px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 5px;
+  background: var(--fleet-orange);
+}
+
+/* ==================================================
+   03.01 VEHICLE CATEGORY FILTERS START
+================================================== */
+#fleet-page .fleet-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 0 12px;
+}
+
+#fleet-page .fleet-filter-button {
+  padding: 8px 16px;
+  border: 1px solid #dce3eb;
+  border-radius: 30px;
+  background: #fff;
+  color: var(--fleet-navy);
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+#fleet-page .fleet-filter-button:hover {
+  border-color: var(--fleet-orange);
+  color: var(--fleet-orange);
+}
+
+#fleet-page .fleet-filter-button.is-active,
+#fleet-page .fleet-filter-button[aria-pressed="true"] {
+  border-color: var(--fleet-orange);
+  background: var(--fleet-orange);
+  color: #fff;
+}
+
+#fleet-page .fleet-results-count {
+  margin: 0 0 12px;
+  color: var(--fleet-muted);
+  font-size: 12px;
+  text-align: right;
+}
+/* ==================================================
+   03.01 VEHICLE CATEGORY FILTERS END
+================================================== */
+
+/* ==================================================
+   03.02 VEHICLE CARD GRID START
+================================================== */
+#fleet-page .fleet-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+#fleet-page .fleet-vehicle-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--fleet-border);
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: var(--fleet-shadow);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+#fleet-page .fleet-vehicle-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 22px rgba(8, 30, 58, 0.13);
+}
+
+#fleet-page .fleet-vehicle-image-button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #f7f8fa;
+  overflow: hidden;
+}
+
+#fleet-page .fleet-vehicle-image-button img {
+  display: block;
+  width: 100%;
+  height: 146px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.25s;
+}
+
+#fleet-page .fleet-vehicle-image-button:hover img {
+  transform: scale(1.035);
+}
+
+#fleet-page .fleet-vehicle-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 14px 13px;
+}
+
+#fleet-page .fleet-vehicle-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+#fleet-page .fleet-vehicle-heading h3 {
+  min-width: 0;
+  margin: 0;
+  color: var(--fleet-navy);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+#fleet-page .fleet-vehicle-category {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border: 1px solid var(--fleet-orange);
+  border-radius: 20px;
+  color: var(--fleet-orange);
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.1;
+}
+
+#fleet-page .fleet-vehicle-specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  color: var(--fleet-navy);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#fleet-page .fleet-vehicle-specs span {
+  white-space: nowrap;
+}
+
+#fleet-page .fleet-vehicle-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+}
+
+#fleet-page .fleet-vehicle-price {
+  margin: 0;
+  color: var(--fleet-orange);
+  font-size: clamp(16px, 1.4vw, 21px);
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+#fleet-page .fleet-vehicle-price small {
+  color: var(--fleet-navy);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#fleet-page .fleet-vehicle-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 0;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #ff8b21, #f45b00);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 750;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+#fleet-page .fleet-vehicle-button:hover {
+  background: var(--fleet-orange-dark);
+}
+
+#fleet-page .fleet-empty-message {
+  padding: 30px 12px;
+  color: var(--fleet-muted);
+  text-align: center;
+}
+
+#fleet-page .fleet-demo-disclaimer {
+  margin: 20px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  text-align: center;
+}
+/* ==================================================
+   03.02 VEHICLE CARD GRID END
+================================================== */
+
+/* ==================================================
+   03. FLEET GALLERY SECTION END
+================================================== */
+
+/* ==================================================
+   04. VEHICLE DETAILS MODAL START
+================================================== */
+#fleet-page .fleet-vehicle-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#fleet-page .fleet-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 18, 35, 0.78);
+}
+
+#fleet-page .fleet-modal-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: min(100%, 850px);
+  max-height: min(90vh, 720px);
+  overflow-y: auto;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.25);
+}
+
+#fleet-page .fleet-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #f0f2f5;
+  color: var(--fleet-navy);
+  font-size: 27px;
+  line-height: 1;
+}
+
+#fleet-page .fleet-modal-close:hover {
+  background: #e1e5ea;
+}
+
+#fleet-page .fleet-modal-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f7f8fa;
+}
+
+#fleet-page .fleet-modal-image-wrapper img {
+  display: block;
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+#fleet-page .fleet-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 40px 30px 30px;
+  color: var(--fleet-navy);
+}
+
+#fleet-page .fleet-modal-category {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--fleet-orange);
+  border-radius: 20px;
+  color: var(--fleet-orange);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+#fleet-page .fleet-modal-content h2 {
+  margin: 0;
+  color: var(--fleet-navy);
+  font-size: clamp(23px, 2.3vw, 31px);
+  line-height: 1.2;
+}
+
+#fleet-page .fleet-modal-content > p {
+  margin: 0;
+  color: var(--fleet-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#fleet-page .fleet-modal-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+#fleet-page .fleet-modal-specs span {
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: #f2f5f8;
+  color: var(--fleet-navy);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+#fleet-page .fleet-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 100%;
+  margin-top: auto;
+}
+
+#fleet-page .fleet-modal-price {
+  margin: 0;
+  color: var(--fleet-navy);
+}
+
+#fleet-page .fleet-modal-price strong {
+  color: var(--fleet-orange);
+  font-size: 25px;
+  font-weight: 850;
+}
+
+#fleet-page .fleet-modal-price span {
+  font-size: 12px;
+}
+
+#fleet-page .fleet-modal-book-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 19px;
+  border-radius: 9px;
+  background: var(--fleet-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+#fleet-page .fleet-modal-book-button:hover {
+  background: var(--fleet-orange-dark);
+  color: #fff;
+}
+
+#fleet-page .fleet-modal-content .fleet-modal-note {
+  color: #66778a;
+  font-size: 11px;
+}
+
+body.fleet-modal-open {
+  overflow: hidden;
+}
+/* ==================================================
+   04. VEHICLE DETAILS MODAL END
+================================================== */
+
+/* ==================================================
+   05. FLEET PAGE RESPONSIVE DESIGN START
+================================================== */
+
+/* LARGE TABLETS */
+@media (max-width: 1199px) {
+  #fleet-page .fleet-hero-section {
+    min-height: 320px;
+  }
+
+  #fleet-page .fleet-vehicle-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #fleet-page .fleet-search-form {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  #fleet-page .fleet-search-button {
+    padding-inline: 16px;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  #fleet-page .fleet-hero-section {
+    min-height: 0;
+    padding: 30px 20px 22px;
+    background-position: 60% center;
+  }
+
+  #fleet-page .fleet-hero-container {
+    min-height: 0;
+    gap: 38px;
+  }
+
+  #fleet-page .fleet-hero-content {
+    max-width: 420px;
+  }
+
+  #fleet-page .fleet-hero-title {
+    font-size: clamp(35px, 5vw, 52px);
+  }
+
+  #fleet-page .fleet-search-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #fleet-page .fleet-search-button {
+    width: 100%;
+  }
+
+  #fleet-page .fleet-vehicle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #fleet-page .fleet-vehicle-image-button img {
+    height: 175px;
+  }
+
+  #fleet-page .fleet-gallery-section {
+    padding-inline: 20px;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+  #fleet-page .fleet-hero-section {
+    padding: 30px 16px 20px;
+    background-image:
+      linear-gradient(90deg, rgba(2, 24, 48, 0.84), rgba(2, 24, 48, 0.43)),
+      url("../images/fleet/hero/fleet-hero.webp");
+    background-position: 62% center;
+  }
+
+  #fleet-page .fleet-hero-container {
+    gap: 26px;
+  }
+
+  #fleet-page .fleet-hero-title {
+    font-size: clamp(36px, 9vw, 48px);
+    letter-spacing: -1px;
+  }
+
+  #fleet-page .fleet-hero-description {
+    max-width: 320px;
+    font-size: 14px;
+  }
+
+  #fleet-page .fleet-search-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 13px;
+  }
+
+  #fleet-page .fleet-search-field {
+    min-height: 54px;
+  }
+
+  #fleet-page .fleet-search-button {
+    min-height: 48px;
+  }
+
+  #fleet-page .fleet-gallery-section {
+    padding: 28px 14px 34px;
+  }
+
+  #fleet-page .fleet-section-eyebrow {
+    font-size: 17px;
+  }
+
+  #fleet-page .fleet-section-heading h2 {
+    font-size: clamp(24px, 6vw, 30px);
+  }
+
+  #fleet-page .fleet-category-filters {
+    gap: 7px;
+  }
+
+  #fleet-page .fleet-filter-button {
+    padding: 7px 11px;
+    font-size: 11px;
+  }
+
+  #fleet-page .fleet-vehicle-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 440px;
+    margin-inline: auto;
+  }
+
+  #fleet-page .fleet-vehicle-image-button img {
+    height: 210px;
+  }
+
+  #fleet-page .fleet-vehicle-info {
+    padding: 12px 16px 15px;
+  }
+
+  #fleet-page .fleet-vehicle-heading h3 {
+    font-size: 16px;
+  }
+
+  #fleet-page .fleet-vehicle-specs {
+    font-size: 12px;
+  }
+
+  #fleet-page .fleet-vehicle-price {
+    font-size: 21px;
+  }
+
+  #fleet-page .fleet-vehicle-button {
+    min-height: 38px;
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  #fleet-page .fleet-vehicle-modal {
+    padding: 12px;
+  }
+
+  #fleet-page .fleet-modal-panel {
+    grid-template-columns: 1fr;
+    max-height: 92vh;
+  }
+
+  #fleet-page .fleet-modal-image-wrapper {
+    padding: 14px;
+  }
+
+  #fleet-page .fleet-modal-image-wrapper img {
+    max-height: 200px;
+  }
+
+  #fleet-page .fleet-modal-content {
+    gap: 12px;
+    padding: 20px;
+  }
+
+  #fleet-page .fleet-modal-content h2 {
+    font-size: 23px;
+  }
+
+  #fleet-page .fleet-modal-footer {
+    align-items: flex-start;
+  }
+}
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 360px) {
+  #fleet-page .fleet-vehicle-bottom {
+    flex-wrap: wrap;
+  }
+
+  #fleet-page .fleet-vehicle-button {
+    width: 100%;
+  }
+
+  #fleet-page .fleet-modal-book-button {
+    width: 100%;
+  }
+}
+
+/* SHORT VIEWPORTS */
+@media (max-height: 650px) and (min-width: 901px) {
+  #fleet-page .fleet-hero-section {
+    min-height: 300px;
+  }
+
+  #fleet-page .fleet-hero-container {
+    min-height: 254px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  #fleet-page .fleet-vehicle-card,
+  #fleet-page .fleet-vehicle-image-button img,
+  #fleet-page .fleet-search-button,
+  #fleet-page .fleet-filter-button,
+  #fleet-page .fleet-vehicle-button {
+    transition: none;
+  }
+
+  #fleet-page .fleet-vehicle-card:hover,
+  #fleet-page .fleet-vehicle-image-button:hover img,
+  #fleet-page .fleet-search-button:hover {
+    transform: none;
+  }
+}
+/* ==================================================
+   05. FLEET PAGE RESPONSIVE DESIGN END
+================================================== */
+
+/* Fleet gallery anchor position */
+#fleet-page #fleet-gallery {
+  scroll-margin-top: 80px;
+}

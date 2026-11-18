@@ -1,0 +1,3960 @@
+/* Homepage foundations and approved Hero section. */
+#main-content {
+  display: block;
+  min-height: 1px;
+}
+#main-content > .section {
+  position: relative;
+}
+
+/* =================================================
+   01. HOME (HERO) SECTION STARTED
+================================================== */
+/* 01 — Hero */
+/* ==================================================
+   HERO SECTION — PREMIUM WHITE & MINT BACKGROUND
+================================================== */
+
+.hero-section {
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 92% 28%,
+      rgba(0, 159, 146, 0.13) 0%,
+      rgba(0, 159, 146, 0.045) 35%,
+      transparent 65%
+    ),
+    linear-gradient(115deg, #ffffff 0%, #f7fcfb 38%, #edf9f6 72%, #e5f5f1 100%);
+
+  isolation: isolate;
+}
+
+.hero-shell {
+  position: relative;
+  padding: clamp(24px, 3vw, 42px) 0 clamp(28px, 3vw, 44px);
+}
+
+/* ==================================================
+   HERO SECTION — SOFT DECORATIVE MINT GLOW
+================================================== */
+
+.hero-shell::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: min(75vw, 1000px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  right: -32%;
+  top: -65%;
+
+  background: radial-gradient(
+    circle,
+    rgba(188, 237, 226, 0.65) 0%,
+    rgba(222, 247, 241, 0.45) 48%,
+    transparent 73%
+  );
+
+  pointer-events: none;
+}
+
+.hero-shell::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  left: -400px;
+  bottom: -350px;
+  border: 65px solid #e9f6f4;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  min-height: 360px;
+  gap: clamp(16px, 3vw, 48px);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  padding-block: 24px;
+}
+.hero-eyebrow {
+  margin-bottom: 18px;
+  color: #008f83;
+  font-size: 0.9rem;
+  font-weight: 750;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  max-width: 630px;
+  margin-bottom: 22px;
+  color: #172b46;
+  font-size: clamp(3.25rem, 5.4vw, 5.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.055em;
+  font-weight: 800;
+}
+.hero-copy h1 span {
+  display: block;
+  color: #009f92;
+}
+.hero-description {
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: #536275;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+}
+.hero-primary-cta,
+.hero-search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 54px;
+  padding: 14px 26px;
+  border: 0;
+  border-radius: 11px;
+  background: #009f92;
+  color: white;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 9px 24px rgb(0 159 146 / 18%);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+.hero-primary-cta:hover,
+.hero-search-button:hover {
+  background: #007e75;
+  color: white;
+  transform: translateY(-2px);
+}
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* ==================================================
+   HERO SECTION — VEHICLE SHOWCASE BACKGROUND GLOW
+================================================== */
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+
+  width: 95%;
+  aspect-ratio: 1.3;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(174, 232, 220, 0.55) 0%,
+    rgba(222, 247, 241, 0.25) 55%,
+    transparent 80%
+  );
+
+  filter: blur(32px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.hero-visual img {
+  width: 115%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  transform: translateX(1%);
+  filter: drop-shadow(0 20px 18px rgb(21 44 58 / 12%));
+}
+.hero-booking-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+}
+.hero-booking {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid #e6edf0;
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgb(22 49 67 / 10%);
+}
+.hero-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+.hero-field label {
+  color: #263c52;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+.hero-field input {
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  padding: 0 14px;
+  border: 1px solid #dbe5e9;
+  border-radius: 10px;
+  background: #fbfcfd;
+  color: #172b46;
+  font-size: 0.94rem;
+}
+.hero-field input:focus {
+  outline: 2px solid #009f92;
+  outline-offset: 1px;
+  border-color: #009f92;
+}
+.hero-field input[aria-invalid="true"] {
+  border-color: #c83f42;
+}
+.hero-search-button {
+  min-height: 52px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.hero-booking-message {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #9e3434;
+  font-size: 0.92rem;
+}
+.hero-booking-message.is-success {
+  color: #007e75;
+}
+@media (max-width: 1050px) {
+  .hero-main {
+    min-height: 380px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(3rem, 6vw, 4.8rem);
+  }
+  .hero-booking {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-shell {
+    padding-top: 26px;
+    padding-bottom: 48px;
+  }
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: 0;
+  }
+  .hero-copy {
+    padding: 12px 0 0;
+  }
+  .hero-eyebrow {
+    font-size: 0.76rem;
+  }
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 10.8vw, 4.25rem);
+    margin-bottom: 16px;
+  }
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 22px;
+  }
+  .hero-visual {
+    margin-top: 12px;
+  }
+  .hero-visual img {
+    width: 110%;
+    max-width: 110%;
+  }
+  .hero-booking-wrap {
+    margin-top: 12px;
+  }
+  .hero-booking {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 18px;
+    border-radius: 15px;
+  }
+  .hero-search-button {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-primary-cta,
+  .hero-search-button {
+    transition: none;
+  }
+}
+
+/* ==================================================
+   HERO SECTION — DESKTOP VIEWPORT HEIGHT FIX
+================================================== */
+
+@media (min-width: 1101px) {
+  #hero {
+    min-height: 0;
+  }
+
+  #hero .hero-shell {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  #hero .hero-main {
+    min-height: 0;
+    gap: 20px;
+  }
+
+  #hero .hero-booking-wrap {
+    margin-top: 0;
+  }
+}
+
+/* ==================================================
+   HERO SECTION — BALANCED DESKTOP HEIGHT
+================================================== */
+
+@media (min-width: 1101px) and (max-height: 800px) {
+  #hero .hero-shell {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  #hero .hero-main {
+    min-height: 390px;
+  }
+
+  #hero .hero-main img {
+    max-height: 390px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  #hero .hero-booking-wrap {
+    margin-top: 12px;
+  }
+}
+
+/* ==================================================
+   HERO SECTION — DESKTOP VIEWPORT HEIGHT
+================================================== */
+
+@media (min-width: 1101px) {
+  #hero {
+    min-height: calc(100vh - 88px);
+    min-height: calc(100dvh - 88px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  #hero .hero-shell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  #hero .hero-main {
+    min-height: 0;
+    gap: 20px;
+  }
+
+  #hero .hero-visual img {
+    width: 115%;
+    max-width: none;
+    max-height: clamp(340px, 52vh, 480px);
+    object-fit: contain;
+  }
+
+  #hero .hero-booking-wrap {
+    margin-top: 12px;
+  }
+}
+
+/* ==================================================
+   HERO — CINEMATIC FIVE-CAR SHOWCASE
+   Scoped to #hero; does not alter section heights or scrolling.
+================================================== */
+#hero .hero-showcase {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding-bottom: 27px;
+}
+#hero .hero-showcase-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 410px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #e8f1f0;
+  box-shadow: 0 20px 38px rgb(21 44 58 / 12%);
+}
+#hero .hero-visual .hero-showcase-stage img.hero-showcase-slide {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.055);
+  filter: none;
+  transition:
+    opacity 800ms ease,
+    transform 4800ms ease;
+  pointer-events: none;
+}
+#hero .hero-visual .hero-showcase-stage img.hero-showcase-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+#hero .hero-showcase-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+#hero .hero-showcase-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #a8c6c3;
+  cursor: pointer;
+  transition:
+    width 200ms ease,
+    background-color 200ms ease;
+}
+#hero .hero-showcase-dot.is-active {
+  width: 26px;
+  border-radius: 999px;
+  background: #009f92;
+}
+#hero .hero-showcase-dot:focus-visible {
+  outline: 3px solid #172b46;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  #hero .hero-showcase {
+    width: 100%;
+  }
+  #hero .hero-showcase-stage {
+    max-height: none;
+    border-radius: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #hero .hero-visual .hero-showcase-stage img.hero-showcase-slide,
+  #hero .hero-showcase-dot {
+    transition: none;
+  }
+}
+
+/* ==================================================
+   HERO — COMPACT TOP-RIGHT FEATURE BADGE
+   Option 9: navy label and angled teal accent.
+   Overlay only; does not affect carousel or section dimensions.
+================================================== */
+#hero .hero-showcase-stage .hero-feature-badge {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(58%, 220px);
+  min-height: 44px;
+  padding: 8px 14px 8px 23px;
+  background: #102a4b;
+  color: #fff;
+  border-radius: 0 0 0 9px;
+  box-shadow: 0 5px 14px rgb(5 20 38 / 20%);
+  pointer-events: none;
+  isolation: isolate;
+}
+#hero .hero-showcase-stage .hero-feature-badge::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -12px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: #009f92;
+  transform: skewX(-23deg);
+  border-radius: 3px 0 0 3px;
+}
+#hero .hero-feature-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: #ffd166;
+}
+#hero .hero-feature-text {
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  text-wrap: balance;
+}
+@media (max-width: 700px) {
+  #hero .hero-showcase-stage .hero-feature-badge {
+    top: 10px;
+    max-width: 60%;
+    min-height: 36px;
+    padding: 6px 10px 6px 16px;
+    gap: 6px;
+  }
+  #hero .hero-feature-icon {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
+  }
+  #hero .hero-feature-text {
+    font-size: 0.65rem;
+  }
+}
+
+/* =================================================
+   01. HOME (HERO) SECTION ENDED
+================================================== */
+
+/* =================================================
+   02. ABOUT US SECTION STARTED
+================================================== */
+
+.about-section {
+  background: #ffffff;
+  padding-block: clamp(48px, 5vw, 76px);
+  overflow: hidden;
+}
+
+@media (min-width: 1101px) {
+  .about-section {
+    min-height: calc(100vh - 88px);
+    min-height: calc(100dvh - 88px);
+    display: flex;
+    align-items: center;
+    padding-block: 24px;
+  }
+
+  .about-section > .about-container {
+    width: 100%;
+  }
+
+  .about-image-wrap {
+    max-height: min(450px, calc(100dvh - 260px));
+  }
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(36px, 4vw, 64px);
+}
+
+/* About Us Image */
+
+.about-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.2 / 1;
+  overflow: hidden;
+  border-radius: 42px 42px 42px 42px;
+  clip-path: polygon(7% 0, 100% 0, 86% 100%, 0 100%);
+}
+
+.about-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-right: 3px solid #009f92;
+  pointer-events: none;
+  clip-path: polygon(97% 0, 100% 0, 86% 100%, 83% 100%);
+}
+
+/* About Us Content */
+
+.about-content {
+  min-width: 0;
+}
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #008f83;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.about-eyebrow span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #009f92;
+}
+
+.about-title {
+  margin: 0 0 16px;
+  color: #172b46;
+  font-size: clamp(2.25rem, 3.4vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.about-description {
+  max-width: 620px;
+  margin: 0;
+  color: #536275;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.75;
+}
+
+/* About Us Service Highlights */
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.about-feature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.about-feature + .about-feature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  height: 60px;
+  width: 1px;
+  background: #a5ddd6;
+}
+
+.about-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #009f92;
+  color: #ffffff;
+}
+
+.about-feature-icon svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.about-feature-label {
+  color: #172b46;
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+/* ==================================================
+   02. ABOUT US INFORMATION HIGHLIGHT STARTED
+================================================== */
+
+.about-info-highlight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 26px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #e7f8f5 0%, #dff6f1 100%);
+}
+
+.about-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  color: #009f92;
+}
+
+.about-info-icon svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.about-info-text {
+  margin: 0;
+  color: #172b46;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==================================================
+   02. ABOUT US INFORMATION HIGHLIGHT ENDED
+================================================== */
+
+/* About Us Responsive Layout */
+
+@media (max-width: 1050px) {
+  .about-container {
+    gap: 32px;
+  }
+
+  .about-image-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .about-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+  }
+
+  .about-description {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .about-feature {
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    padding-block: 48px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image-wrap {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    margin-inline: auto;
+    border-radius: 26px;
+    clip-path: none;
+  }
+
+  .about-image-wrap::after {
+    display: none;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: clamp(2.1rem, 8vw, 2.75rem);
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-features {
+    margin-top: 26px;
+  }
+
+  .about-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-feature-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .about-feature-label {
+    font-size: 0.9rem;
+  }
+
+  /* ==================================================
+     02. ABOUT US MOBILE INFORMATION HIGHLIGHT STARTED
+  ================================================== */
+
+  .about-info-highlight {
+    gap: 12px;
+    margin-top: 24px;
+    padding: 14px 16px;
+  }
+
+  .about-info-icon {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .about-info-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .about-info-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  /* ==================================================
+     02. ABOUT US MOBILE INFORMATION HIGHLIGHT ENDED
+  ================================================== */
+}
+
+@media (max-width: 380px) {
+  .about-feature {
+    padding-inline: 5px;
+  }
+
+  .about-feature-label {
+    font-size: 0.82rem;
+  }
+
+  .about-feature + .about-feature::before {
+    height: 54px;
+  }
+}
+
+/* =================================================
+   02. ABOUT US SECTION SCROLL ALIGNMENT STARTED
+================================================== */
+
+#about {
+  scroll-margin-top: 0;
+}
+
+/* =================================================
+   02. ABOUT US SECTION SCROLL ALIGNMENT ENDED
+================================================== */
+
+/* =================================================
+   02. ABOUT US — DESKTOP WIDTH & HEIGHT REFINEMENT
+================================================== */
+
+@media (min-width: 1101px) {
+  .about-section {
+    min-height: calc(100vh - 88px);
+    min-height: calc(100dvh - 88px);
+    padding-block: 24px;
+  }
+
+  .about-section > .about-container {
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(36px, 4vw, 60px);
+  }
+
+  .about-image-wrap {
+    width: 100%;
+    height: 480px;
+    max-height: calc(100dvh - 160px);
+    aspect-ratio: auto;
+  }
+
+  .about-content {
+    min-width: 0;
+  }
+
+  .about-description {
+    max-width: 100%;
+  }
+
+  .about-features {
+    margin-top: 24px;
+  }
+}
+
+/* ==================================================
+   02. ABOUT US SHORT DESKTOP VIEWPORT STARTED
+================================================== */
+
+@media (min-width: 1101px) and (max-height: 760px) {
+  .about-image-wrap {
+    height: clamp(320px, 48dvh, 420px);
+    max-height: calc(100dvh - 160px);
+  }
+
+  .about-info-highlight {
+    margin-top: 18px;
+    padding: 12px 16px;
+  }
+
+  .about-features {
+    margin-top: 18px;
+  }
+}
+
+/* ==================================================
+   02. ABOUT US SHORT DESKTOP VIEWPORT ENDED
+================================================== */
+
+/* =================================================
+   02. ABOUT US SECTION ENDED
+================================================== */
+
+/* =================================================
+   03. OUR FLEET SECTION STARTED
+================================================== */
+
+.fleet-section {
+  display: flex;
+  align-items: center;
+  min-height: calc(100dvh - 100px);
+  padding-block: clamp(40px, 5vw, 72px);
+  background: #f7fafb;
+  scroll-margin-top: 0;
+}
+
+.fleet-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(36px, 5vw, 76px);
+}
+
+.fleet-content {
+  min-width: 0;
+}
+
+.fleet-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #008f83;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.fleet-eyebrow span {
+  width: 32px;
+  height: 2px;
+  background: #009f92;
+}
+
+.fleet-title {
+  margin-bottom: 20px;
+  color: #172b46;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.fleet-description {
+  max-width: 470px;
+  margin-bottom: 34px;
+  color: #344760;
+  font-size: clamp(1rem, 1.3vw, 1.13rem);
+  line-height: 1.8;
+}
+
+.fleet-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.fleet-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.fleet-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #009f92;
+  color: #ffffff;
+}
+
+.fleet-feature-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.fleet-feature-label {
+  color: #172b46;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.fleet-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 52px;
+  padding: 13px 26px;
+  border-radius: 11px;
+  background: #009f92;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgb(0 159 146 / 15%);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fleet-cta:hover {
+  background: #007e75;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.fleet-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  min-width: 0;
+  scroll-margin-top: 110px;
+}
+
+.fleet-image-card {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: 17px;
+  background: #e9eff2;
+}
+
+.fleet-image-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+@media (hover: hover) {
+  .fleet-image-card:hover img {
+    transform: scale(1.035);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .fleet-section {
+    min-height: auto;
+    padding-block: 64px;
+  }
+
+  .fleet-container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .fleet-content {
+    max-width: 680px;
+  }
+
+  .fleet-description {
+    max-width: 620px;
+  }
+
+  .fleet-features {
+    max-width: 530px;
+  }
+
+  .fleet-gallery {
+    width: 100%;
+    max-width: 780px;
+    margin-inline: auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .fleet-section {
+    padding-block: 48px;
+  }
+
+  .fleet-container {
+    gap: 30px;
+  }
+
+  .fleet-title {
+    font-size: clamp(2.5rem, 10vw, 3.2rem);
+  }
+
+  .fleet-description {
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .fleet-features {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .fleet-feature-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .fleet-feature-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .fleet-feature-label {
+    font-size: 0.78rem;
+  }
+
+  .fleet-gallery {
+    gap: 12px;
+  }
+
+  .fleet-image-card {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .fleet-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .fleet-feature-label {
+    font-size: 0.72rem;
+  }
+
+  .fleet-cta {
+    width: 100%;
+  }
+}
+
+/* =================================================
+   03. OUR FLEET SECTION ENDED
+================================================== */
+
+/* =================================================
+   04. RENTAL SERVICES SECTION STARTED
+================================================= */
+.services-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  padding: clamp(24px, 3.2vh, 36px) 0;
+  background: radial-gradient(
+    ellipse at 12% 65%,
+    #18385b 0%,
+    #091f3a 48%,
+    #06172e 100%
+  );
+  color: #fff;
+  scroll-margin-top: 0;
+}
+
+.services-section::before,
+.services-section::after {
+  content: "";
+  position: absolute;
+  width: 490px;
+  height: 280px;
+  border: 9px solid #ff781b;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+.services-section::before {
+  top: -230px;
+  left: -180px;
+  transform: rotate(-23deg);
+}
+.services-section::after {
+  bottom: -225px;
+  right: -175px;
+  transform: rotate(-23deg);
+}
+
+.services-container {
+  width: min(
+    calc(100% - 2 * var(--page-gutter, 24px)),
+    var(--container-width, 1200px)
+  );
+  margin-inline: auto;
+}
+.services-heading {
+  margin: 0 0 clamp(18px, 2.5vh, 28px);
+  text-align: center;
+}
+.services-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.services-eyebrow::before,
+.services-eyebrow::after {
+  content: "";
+  width: clamp(36px, 5vw, 75px);
+  height: 3px;
+  background: #ff781b;
+}
+.services-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.65rem, 4.2vw, 4.7rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.services-heading h2 span {
+  color: #ff781b;
+}
+
+.services-intro {
+  max-width: 1050px;
+  margin: 10px auto 0;
+  color: #d7e0ec;
+  font-size: clamp(0.98rem, 1.35vw, 1.25rem);
+  line-height: 1.45;
+}
+.services-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.services-visual {
+  min-width: 0;
+  width: calc(
+    100% +
+      max(
+        var(--page-gutter, 24px),
+        (100vw - var(--container-width, 1200px)) / 2
+      )
+  );
+  margin-left: calc(
+    -1 *
+      max(
+        var(--page-gutter, 24px),
+        (100vw - var(--container-width, 1200px)) / 2
+      )
+  );
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 0%,
+    #000 78%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to right, #000 0%, #000 78%, transparent 100%);
+}
+
+.services-visual img {
+  display: block;
+  width: 100%;
+  height: clamp(340px, 44vh, 460px);
+  max-height: none;
+  object-fit: cover;
+  object-position: center 58%;
+}
+.services-content {
+  min-width: 0;
+}
+.services-list {
+  display: grid;
+  gap: clamp(14px, 2vh, 24px);
+  margin: 0;
+  padding: 0;
+}
+.services-item {
+  display: grid;
+  grid-template-columns: clamp(64px, 5.8vw, 88px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 24px);
+  min-width: 0;
+}
+.services-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(64px, 5.8vw, 88px);
+  height: clamp(64px, 5.8vw, 88px);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2c4b6d, #142f50);
+  color: #fff;
+}
+
+.services-icon svg {
+  display: block;
+  width: 48%;
+  height: 48%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.services-item-copy {
+  min-width: 0;
+  padding-left: clamp(14px, 1.6vw, 22px);
+  border-left: 4px solid #ff781b;
+}
+.services-item-copy h3 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: clamp(1.08rem, 1.55vw, 1.55rem);
+  font-weight: 750;
+  line-height: 1.2;
+}
+.services-item-copy p {
+  margin: 0;
+  color: #d7e0ec;
+  font-size: clamp(0.9rem, 1.05vw, 1.05rem);
+  line-height: 1.5;
+}
+.services-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 52px;
+  margin-top: clamp(16px, 2.5vh, 26px);
+  margin-left: clamp(78px, 7.6vw, 112px);
+  padding: 12px 28px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ff8b2c, #ff6811);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.services-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+.services-cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .services-section {
+    padding-block: 48px;
+  }
+  .services-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .services-visual {
+    width: 100%;
+    margin-left: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .services-visual img {
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .services-content {
+    max-width: 680px;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .services-cta {
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .services-section {
+    padding-block: 36px;
+  }
+  .services-heading h2 {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+  .services-heading {
+    margin-bottom: 24px;
+  }
+  .services-item {
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 12px;
+  }
+  .services-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 15px;
+  }
+  .services-item-copy {
+    padding-left: 12px;
+  }
+  .services-item-copy h3 {
+    font-size: 1.05rem;
+  }
+  .services-cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-cta {
+    transition: none;
+  }
+}
+
+/* ==================================================
+   04. RENTAL SERVICES — DESKTOP LAYOUT REFINEMENT
+   Fit the section within one desktop viewport.
+   Preserve the complete car image and content.
+================================================== */
+
+@media (min-width: 901px) {
+  .services-section {
+    min-height: 0;
+    height: auto;
+    padding-block: clamp(22px, 3vh, 30px);
+  }
+
+  .services-container {
+    width: min(
+      calc(100% - 2 * var(--page-gutter, 24px)),
+      var(--container-width, 1200px)
+    );
+  }
+
+  .services-heading {
+    margin-bottom: clamp(16px, 2vh, 22px);
+  }
+
+  .services-main {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+    align-items: center;
+    gap: clamp(20px, 2.5vw, 36px);
+  }
+
+  /* ==================================================
+   04. RENTAL SERVICES — DESKTOP IMAGE PRESENTATION STARTED
+================================================== */
+
+  .services-visual {
+    width: 100%;
+    margin-left: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 0%,
+      #000 85%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(to right, #000 0%, #000 85%, transparent 100%);
+  }
+
+  .services-visual img {
+    display: block;
+    width: 100%;
+    height: clamp(330px, 42dvh, 400px);
+    object-fit: cover;
+    object-position: center 58%;
+  }
+
+  /* ==================================================
+   04. RENTAL SERVICES — DESKTOP IMAGE PRESENTATION ENDED
+================================================== */
+
+  .services-list {
+    gap: clamp(12px, 1.5vh, 18px);
+  }
+
+  .services-cta {
+    margin-top: clamp(14px, 2vh, 20px);
+  }
+}
+
+/* ==================================================
+   04. RENTAL SERVICES — DESKTOP HEIGHT OPTIMIZATION
+   Compact spacing for shorter desktop screens.
+================================================== */
+
+@media (min-width: 1101px) and (max-height: 900px) {
+  .services-heading {
+    margin-bottom: 16px;
+  }
+
+  .services-eyebrow {
+    margin-bottom: 6px;
+  }
+
+  .services-heading h2 {
+    font-size: clamp(2.6rem, 3.7vw, 3.8rem);
+  }
+
+  .services-intro {
+    margin-top: 8px;
+  }
+
+  .services-list {
+    gap: 12px;
+  }
+
+  .services-icon {
+    width: 76px;
+    height: 76px;
+  }
+
+  .services-item {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .services-cta {
+    margin-top: 16px;
+  }
+}
+
+/* ==================================================
+   04. RENTAL SERVICES — DESKTOP VIEWPORT HEIGHT STARTED
+   Maintain full-height layout without clipping content.
+================================================== */
+
+@media (min-width: 1101px) {
+  #services {
+    min-height: calc(100dvh - 88px);
+    height: auto;
+    padding-block: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+/* ==================================================
+   04. RENTAL SERVICES — DESKTOP VIEWPORT HEIGHT ENDED
+================================================== */
+
+/* ==================================================
+   04. RENTAL SERVICES SECTION ENDED
+================================================== */
+
+/* =================================================
+   05. WHY CHOOSE US SECTION STARTED
+================================================== */
+
+.why-choose-us-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #f8fafc;
+  color: #0b2340;
+  padding-block: 36px;
+}
+
+.why-choose-us-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(36px, 4vw, 64px);
+  width: 100%;
+}
+
+/* Left: four benefit cards */
+
+.why-choose-us-benefits {
+  display: grid;
+  gap: clamp(14px, 2vh, 22px);
+  min-width: 0;
+}
+
+.why-choose-us-card {
+  display: flex;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 108px;
+}
+
+.why-choose-us-icon {
+  display: flex;
+  flex: 0 0 88px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 88px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #23466d, #071a32);
+  color: #ff8015;
+  box-shadow: 0 9px 22px rgb(9 29 53 / 12%);
+  z-index: 1;
+}
+
+.why-choose-us-icon svg {
+  width: 43px;
+  height: 43px;
+}
+
+.why-choose-us-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  margin-left: -8px;
+  padding: 16px 20px 16px 27px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 9px 28px rgb(17 40 70 / 8%);
+}
+
+.why-choose-us-card-copy h3,
+.why-choose-us-card-copy p {
+  margin: 0;
+}
+
+.why-choose-us-card-copy h3 {
+  padding-left: 14px;
+  border-left: 3px solid #ff8015;
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #0b2340;
+}
+
+.why-choose-us-card-copy p {
+  margin-top: 6px;
+  padding-left: 17px;
+  font-size: clamp(0.85rem, 1vw, 0.98rem);
+  line-height: 1.5;
+  color: #243b56;
+}
+
+/* Right: heading and car image */
+
+.why-choose-us-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  align-self: stretch;
+}
+
+.why-choose-us-copy {
+  position: relative;
+  z-index: 1;
+  padding-top: 12px;
+}
+
+.why-choose-us-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  color: #0b2340;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.why-choose-us-eyebrow::before,
+.why-choose-us-eyebrow::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background: #ff8015;
+}
+
+.why-choose-us-title {
+  margin: 0 0 18px;
+  color: #081e38;
+  font-size: clamp(2.3rem, 3.7vw, 3.75rem);
+  font-weight: 850;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.why-choose-us-title span {
+  color: #ff7512;
+}
+
+.why-choose-us-description {
+  max-width: 550px;
+  margin: 0;
+  color: #263b56;
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+  line-height: 1.65;
+}
+
+.why-choose-us-accent {
+  display: block;
+  width: 76px;
+  height: 4px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background: #ff8015;
+}
+
+.why-choose-us-visual {
+  position: relative;
+  width: 100%;
+  margin-top: 22px;
+  overflow: hidden;
+  border-radius: 46% 0 0 18%;
+  background: #e9eef3;
+}
+
+.why-choose-us-visual::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-top: 5px solid #ff8015;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.why-choose-us-visual img {
+  display: block;
+  width: 100%;
+  height: clamp(250px, 34dvh, 350px);
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+/* Desktop viewport alignment */
+
+/* 05. WHY CHOOSE US — DESKTOP VIEWPORT ALIGNMENT */
+
+@media (min-width: 1101px) {
+  .why-choose-us-section {
+    min-height: calc(100dvh - 88px);
+    padding-block: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .why-choose-us-container {
+    width: calc(100% - 48px);
+    max-width: 1200px;
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .why-choose-us-benefits {
+    gap: 24px;
+    align-self: center;
+    width: 100%;
+  }
+
+  .why-choose-us-card {
+    min-height: 96px;
+  }
+
+  .why-choose-us-icon {
+    flex-basis: 72px;
+    height: 72px;
+  }
+
+  .why-choose-us-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .why-choose-us-card-copy {
+    padding: 12px 16px 12px 22px;
+  }
+
+  .why-choose-us-card-copy h3 {
+    font-size: 1.15rem;
+  }
+
+  .why-choose-us-card-copy p {
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+
+  .why-choose-us-title {
+    font-size: clamp(2.5rem, 3.4vw, 3.4rem);
+  }
+
+  .why-choose-us-visual {
+    margin-top: 16px;
+  }
+
+  .why-choose-us-visual img {
+    height: clamp(230px, 30dvh, 290px);
+  }
+}
+
+/* =================================================
+   05. WHY CHOOSE US SECTION ENDED
+================================================== */
+
+/* =================================================
+   06. HOW IT WORKS SECTION STARTED
+================================================== */
+
+.how-it-works-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100dvh - 88px);
+  padding: clamp(20px, 3vh, 30px) 0;
+  background:
+    radial-gradient(ellipse at 4% 45%, rgb(224 247 245 / 60%), transparent 36%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 55%, #f0f8f8 100%);
+  color: #0b2340;
+}
+
+.how-it-works-container {
+  position: relative;
+  z-index: 1;
+  width: min(calc(100% - 48px), 1200px);
+  margin-inline: auto;
+}
+
+/* SECTION HEADING */
+
+.how-it-works-header {
+  text-align: center;
+}
+
+.how-it-works-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 10px;
+  color: #0b2340;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.how-it-works-eyebrow::before,
+.how-it-works-eyebrow::after {
+  content: "";
+  width: 46px;
+  height: 3px;
+  background: #ff8015;
+}
+
+.how-it-works-title {
+  margin: 0;
+  color: #081e38;
+  font-size: clamp(2rem, 3.1vw, 3.15rem);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.how-it-works-title span {
+  color: #ff7512;
+}
+
+.how-it-works-intro {
+  max-width: 900px;
+  margin: 12px auto 0;
+  color: #31465e;
+  font-size: clamp(0.92rem, 1.15vw, 1.08rem);
+  line-height: 1.5;
+}
+
+/* PROCESS TIMELINE */
+
+.how-it-works-process {
+  position: relative;
+  margin-top: clamp(20px, 3vh, 30px);
+}
+
+.how-it-works-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  column-gap: 120px;
+  row-gap: 12px;
+  min-height: 480px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.how-it-works-steps::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  bottom: 25px;
+  left: 50%;
+  width: 4px;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #ffe1c5, #d7dee5 55%, #ffe1c5);
+}
+
+.how-it-works-step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.how-it-works-step-left {
+  grid-column: 1;
+  justify-content: flex-end;
+}
+
+.how-it-works-step-right {
+  grid-column: 2;
+  justify-content: flex-start;
+}
+
+.how-it-works-step:nth-child(1) {
+  grid-row: 1;
+}
+
+.how-it-works-step:nth-child(2) {
+  grid-row: 2;
+}
+
+.how-it-works-step:nth-child(3) {
+  grid-row: 3;
+}
+
+.how-it-works-step:nth-child(4) {
+  grid-row: 4;
+}
+
+/* TIMELINE NUMBER BADGES */
+
+.how-it-works-number {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ff9a24, #ff7108);
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: 0 5px 15px rgb(255 117 18 / 20%);
+  transform: translateY(-50%);
+}
+
+.how-it-works-step-left .how-it-works-number {
+  right: -84px;
+}
+
+.how-it-works-step-right .how-it-works-number {
+  left: -84px;
+}
+
+.how-it-works-number::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 2px;
+  background: #ff8015;
+  transform: translateY(-50%);
+}
+
+.how-it-works-step-left .how-it-works-number::before {
+  right: 100%;
+}
+
+.how-it-works-step-right .how-it-works-number::before {
+  left: 100%;
+}
+
+/* TIMELINE CARDS */
+
+.how-it-works-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 112px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 7px 22px rgb(12 35 62 / 10%);
+}
+
+.how-it-works-step-left .how-it-works-card {
+  border-left: 5px solid #ff8015;
+}
+
+.how-it-works-step-right .how-it-works-card {
+  border-right: 5px solid #ff8015;
+}
+
+.how-it-works-icon {
+  display: grid;
+  flex: 0 0 76px;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 18px;
+  background: #fff1e5;
+  color: #0b2b4e;
+}
+
+.how-it-works-icon svg {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.how-it-works-card-content {
+  min-width: 0;
+}
+
+.how-it-works-card-content h3 {
+  margin: 0 0 6px;
+  color: #0b2340;
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.how-it-works-card-content p {
+  margin: 0;
+  color: #273d56;
+  font-size: clamp(0.8rem, 0.95vw, 0.94rem);
+  line-height: 1.45;
+}
+
+/* CAR IMAGE — LOWER LEFT */
+
+.how-it-works-car {
+  position: absolute;
+  z-index: 1;
+  left: -95px;
+  bottom: -25px;
+  width: clamp(300px, 30vw, 420px);
+  max-width: none;
+  margin: 0;
+  pointer-events: none;
+}
+
+.how-it-works-car img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 12%,
+    #000 88%,
+    transparent 100%
+  );
+}
+
+/* =================================================
+   06. HOW IT WORKS — DESKTOP LAYOUT
+================================================== */
+
+@media (min-width: 1101px) {
+  .how-it-works-section {
+    display: flex;
+    align-items: center;
+    min-height: calc(100dvh - 88px);
+    padding: 18px 0;
+  }
+
+  .how-it-works-container {
+    width: min(calc(100% - 48px), 1320px);
+  }
+
+  .how-it-works-process {
+    margin-top: 22px;
+  }
+
+  .how-it-works-steps {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    column-gap: 120px;
+    row-gap: 10px;
+    min-height: min(500px, 58dvh);
+  }
+
+  .how-it-works-card {
+    min-height: 112px;
+    padding: 14px 18px;
+    gap: 16px;
+  }
+
+  .how-it-works-icon {
+    flex: 0 0 88px;
+    width: 88px;
+    height: 88px;
+  }
+
+  .how-it-works-icon svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .how-it-works-card-content h3 {
+    font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+  }
+
+  .how-it-works-card-content p {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+  }
+
+  /* CAR IMAGE — BOTTOM LEFT, INSIDE SECTION */
+
+  .how-it-works-car {
+    position: absolute;
+    z-index: 1;
+    left: -35px;
+    bottom: -15px;
+    width: clamp(230px, 24vw, 330px);
+    max-width: none;
+    margin: 0;
+    pointer-events: none;
+  }
+
+  .how-it-works-car img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .how-it-works-step {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* =================================================
+   06. HOW IT WORKS — DESKTOP COMPACT ADJUSTMENT
+================================================== */
+
+@media (min-width: 1101px) {
+  .how-it-works-container {
+    width: min(calc(100% - 48px), 1160px);
+  }
+
+  .how-it-works-title {
+    font-size: clamp(2rem, 2.85vw, 2.85rem);
+  }
+
+  .how-it-works-intro {
+    margin-top: 10px;
+    font-size: 0.98rem;
+  }
+
+  .how-it-works-process {
+    margin-top: 18px;
+  }
+
+  .how-it-works-steps {
+    min-height: 0;
+    grid-template-rows: repeat(4, 100px);
+    row-gap: 6px;
+    column-gap: 120px;
+  }
+
+  .how-it-works-card {
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 18px;
+  }
+
+  .how-it-works-icon {
+    flex: 0 0 68px;
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+  }
+
+  .how-it-works-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .how-it-works-card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .how-it-works-card-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .how-it-works-number {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .how-it-works-car {
+    left: -35px;
+    bottom: -8px;
+    width: 260px;
+    max-width: none;
+  }
+}
+
+/* =================================================
+   06. HOW IT WORKS — SHRINK FOUR CARDS ONLY
+================================================== */
+
+@media (min-width: 1101px) {
+  .how-it-works-card {
+    width: 90%;
+    min-height: 0;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .how-it-works-step-left .how-it-works-card {
+    margin-right: auto;
+  }
+
+  .how-it-works-step-right .how-it-works-card {
+    margin-left: auto;
+  }
+}
+
+/* =================================================
+   06. HOW IT WORKS — FIX CAR AND CARD OVERLAP
+================================================== */
+
+@media (min-width: 1101px) {
+  /* Keep the third card above the car photograph */
+  .how-it-works-step:nth-child(3) {
+    z-index: 5;
+  }
+
+  /* Move the car below the third card */
+  .how-it-works-car {
+    position: absolute;
+    left: -35px;
+    bottom: -8px;
+    width: 220px;
+    max-width: none;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .how-it-works-car img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Increase car image size on desktop only */
+@media (min-width: 1101px) {
+  .how-it-works-car {
+    width: 330px;
+    max-width: none;
+  }
+}
+
+/* ==================================================
+   DESKTOP SECTION SCROLL ALIGNMENT FIX
+   Keep section starts below the sticky navbar.
+================================================== */
+
+@media (min-width: 1101px) {
+  #about,
+  #fleet,
+  #services,
+  #why-choose-us,
+  #how-it-works {
+    scroll-margin-top: 88px;
+  }
+}
+
+/* =================================================
+   06. HOW IT WORKS SECTION ENDED
+================================================== */
+
+/* =================================================
+   07. PRICING & PACKAGES SECTION STARTED
+================================================== */
+
+.pricing-section {
+  --pricing-navy: #0b2340;
+  --pricing-orange: #ff7910;
+
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100dvh - 88px);
+  padding: 22px 0 24px;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 8%,
+    #ffffff 0%,
+    #f8fafc 68%,
+    #f1f5f8 100%
+  );
+  color: var(--pricing-navy);
+}
+
+/* Decorative background elements */
+
+.pricing-section::before,
+.pricing-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pricing-section::before {
+  width: 560px;
+  height: 230px;
+  left: -220px;
+  bottom: -135px;
+  border: 28px double rgb(195 207 217 / 22%);
+  border-radius: 50%;
+  transform: rotate(18deg);
+}
+
+.pricing-section::after {
+  width: 600px;
+  height: 230px;
+  right: -280px;
+  top: 100px;
+  border: 28px double rgb(195 207 217 / 20%);
+  border-radius: 50%;
+  transform: rotate(-25deg);
+}
+
+/* MAIN CONTAINER */
+
+.pricing-container {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(calc(100% - 48px), 1320px);
+  margin-inline: auto;
+}
+
+/* SECTION HEADING */
+
+.pricing-header {
+  text-align: center;
+}
+
+.pricing-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 8px;
+  color: var(--pricing-navy);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.pricing-eyebrow::before,
+.pricing-eyebrow::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: var(--pricing-orange);
+}
+
+.pricing-title {
+  margin: 0;
+  color: var(--pricing-navy);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+
+.pricing-title span {
+  color: #ff6812;
+}
+
+.pricing-intro {
+  margin: 9px auto 0;
+  color: #31465e;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  line-height: 1.4;
+}
+
+/* THREE-COLUMN PRICING LAYOUT */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* PRICING CARDS */
+
+.pricing-card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 22px 18px;
+  border: 1px solid #e8edf2;
+  border-radius: 26px;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 12px 30px rgb(12 35 62 / 10%);
+}
+
+.pricing-card-daily,
+.pricing-card-monthly {
+  margin-block: 18px;
+}
+
+/* FEATURED MIDDLE CARD */
+
+.pricing-card-featured {
+  border: 2px solid var(--pricing-orange);
+  background: linear-gradient(180deg, #ffffff 0%, #fffaf5 68%, #ffffff 100%);
+  box-shadow:
+    0 12px 28px rgb(255 111 15 / 18%),
+    0 8px 24px rgb(12 35 62 / 8%);
+}
+
+.pricing-popular-badge {
+  position: absolute;
+  z-index: 3;
+  top: -19px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: max-content;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #ff9b12, #ff5c09);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgb(255 110 12 / 20%);
+  transform: translateX(-50%);
+}
+
+.pricing-popular-badge span {
+  font-size: 1.1rem;
+}
+
+/* CARD HEADER */
+
+.pricing-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 82px;
+}
+
+.pricing-card-icon {
+  display: grid;
+  flex: 0 0 70px;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 22px;
+  background: #fff0e1;
+  color: var(--pricing-navy);
+}
+
+.pricing-card-icon svg {
+  display: block;
+  width: 43px;
+  height: 43px;
+}
+
+.pricing-card-heading-text {
+  min-width: 0;
+}
+
+.pricing-card-heading-text h3 {
+  margin: 0 0 5px;
+  color: var(--pricing-navy);
+  font-size: clamp(1.25rem, 1.65vw, 1.7rem);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.pricing-card-heading-text p {
+  margin: 0;
+  color: #263c55;
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  line-height: 1.35;
+}
+
+/* CAR IMAGES */
+
+.pricing-car-image {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 100%;
+  height: 108px;
+  margin: 7px 0 2px;
+}
+
+.pricing-car-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.pricing-card-featured .pricing-car-image {
+  height: 118px;
+}
+
+/* PRICE */
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.pricing-amount {
+  color: var(--pricing-navy);
+  font-size: clamp(2rem, 2.65vw, 2.65rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.pricing-period {
+  color: var(--pricing-navy);
+  font-size: clamp(0.85rem, 1.1vw, 1.1rem);
+  font-weight: 500;
+}
+
+.pricing-price-note {
+  margin: 0;
+  color: var(--pricing-navy);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* PACKAGE FEATURES */
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-features li {
+  position: relative;
+  padding-left: 30px;
+  color: var(--pricing-navy);
+  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  line-height: 1.35;
+}
+
+.pricing-features li::before {
+  content: "✓";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffb21b, #ff8300);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pricing-card-featured .pricing-features li::before {
+  background: linear-gradient(145deg, #ff9c14, #ff6009);
+}
+
+/* BOOKING BUTTONS */
+
+.pricing-button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 10px 14px;
+  border: 2px solid var(--pricing-orange);
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pricing-button span {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.pricing-button-outline {
+  background: #ffffff;
+  color: #f35c0a;
+}
+
+.pricing-button-outline:hover {
+  background: #fff1e6;
+}
+
+.pricing-button-primary {
+  background: linear-gradient(135deg, #ff9412, #ff5c08);
+  color: #ffffff;
+}
+
+.pricing-button-primary:hover {
+  box-shadow: 0 6px 18px rgb(255 111 15 / 25%);
+}
+
+.pricing-button:focus-visible {
+  outline: 3px solid #0b9e98;
+  outline-offset: 4px;
+}
+
+/* =================================================
+   07. PRICING — FIX CAR IMAGE AND TEXT OVERLAP
+   Desktop only
+================================================== */
+
+@media (min-width: 1101px) {
+  /* Keep card content in normal vertical flow */
+  .pricing-section .pricing-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reserve dedicated space for each car */
+  .pricing-section .pricing-car-image,
+  .pricing-section .pricing-card-featured .pricing-car-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 125px;
+    width: 100%;
+    height: 125px;
+    min-height: 125px;
+    margin: 8px 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* Prevent images from extending into other content */
+  .pricing-section .pricing-car-image img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+
+  /* Keep price below the image */
+  .pricing-section .pricing-price {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    justify-content: center;
+    margin-top: 4px;
+  }
+
+  /* Keep package benefits below the price */
+  .pricing-section .pricing-features {
+    position: relative;
+    flex: 0 0 auto;
+    margin: 12px 0 16px;
+    gap: 7px;
+  }
+
+  /* Booking buttons remain at the card bottom */
+  .pricing-section .pricing-button {
+    position: relative;
+    flex-shrink: 0;
+    margin-top: auto;
+  }
+}
+
+/* =================================================
+   07. PRICING — HEADING AND POSITION ADJUSTMENTS
+================================================== */
+
+@media (min-width: 1101px) {
+  /* Move the entire pricing content downward */
+  .pricing-section {
+    padding-top: 22px;
+  }
+
+  .pricing-section > .pricing-container {
+    transform: translateY(45px);
+  }
+
+  /* Prevent the Most Popular badge from hiding the title */
+  .pricing-card-featured .pricing-card-heading {
+    padding-top: 18px;
+    min-height: 100px;
+  }
+
+  /* Keep the badge above the card heading */
+  .pricing-card-featured .pricing-popular-badge {
+    top: -19px;
+    z-index: 5;
+  }
+
+  /* Keep the featured card compact */
+  .pricing-card-featured .pricing-car-image {
+    height: 110px;
+    min-height: 110px;
+    flex-basis: 110px;
+  }
+}
+
+/* =================================================
+   07. PRICING — ADJUSTMENTS ENDED
+================================================== */
+
+
+/* =================================================
+   07. PRICING PACKAGE POP-UP STARTED
+================================================== */
+
+.pricing-modal {
+  box-sizing: border-box;
+  position: fixed;
+  width: min(92%, 560px);
+  max-width: 560px;
+  max-height: min(88dvh, 760px);
+  margin: auto;
+  padding: 0;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 22px;
+  background: #ffffff;
+  color: #0b2340;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 25%);
+}
+
+.pricing-modal:not([open]) {
+  display: none;
+}
+
+.pricing-modal::backdrop {
+  background: rgb(5 20 40 / 70%);
+  backdrop-filter: blur(4px);
+}
+
+.pricing-modal-inner {
+  position: relative;
+  padding: 28px;
+}
+
+.pricing-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #f0f3f7;
+  color: #0b2340;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.pricing-modal-close:hover {
+  background: #ffe6d4;
+}
+
+.pricing-modal-eyebrow {
+  margin: 0 42px 8px 0;
+  color: #ff6812;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pricing-modal h2 {
+  margin: 0 40px 8px 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+
+.pricing-modal-description {
+  margin: 0 0 16px;
+  color: #526278;
+  line-height: 1.5;
+}
+
+.pricing-modal-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f7f9fc;
+}
+
+.pricing-modal-summary img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.pricing-modal-label {
+  margin: 0 0 4px;
+  color: #526278;
+  font-size: 0.78rem;
+}
+
+.pricing-modal-price {
+  margin: 0;
+  color: #ff6812;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 900;
+}
+
+#pricing-modal-duration {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+}
+
+.pricing-modal h3 {
+  margin: 18px 0 10px;
+  font-size: 1rem;
+}
+
+.pricing-modal ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.pricing-modal li::marker {
+  color: #ff7910;
+}
+
+.pricing-modal-disclaimer {
+  margin: 18px 0;
+  color: #526278;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.pricing-modal-enquire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #ff9412, #ff5c08);
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.pricing-modal-enquire:hover {
+  background: #e95b05;
+}
+
+.pricing-modal :focus-visible {
+  outline: 3px solid #009f95;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .pricing-modal {
+    width: calc(100% - 24px);
+    max-height: 90dvh;
+    border-radius: 18px;
+  }
+
+  .pricing-modal-inner {
+    padding: 22px 18px;
+  }
+
+  .pricing-modal-summary {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .pricing-modal-summary img {
+    height: 105px;
+  }
+}
+
+/* =================================================
+   07. PRICING POP-UP — PREVENT BACKGROUND SCROLL
+================================================== */
+
+html.pricing-modal-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.pricing-modal-open body {
+  overflow: hidden;
+}
+
+/* =================================================
+   07. PRICING PACKAGE POP-UP ENDED
+================================================== */
+
+
+/* =================================================
+   07. PRICING & PACKAGES SECTION ENDED
+================================================== */
+
+/* =================================================
+   08. CUSTOMER TESTIMONIALS SECTION STARTED
+================================================== */
+
+.testimonials-section {
+  --testimonials-navy: #0b2340;
+  --testimonials-orange: #ff790b;
+  --testimonials-gap: 24px;
+  --testimonials-visible: 3;
+
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100dvh - 88px);
+  padding: clamp(55px, 7vh, 75px) 0 24px;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 10%,
+    #ffffff 0%,
+    #f8fafc 70%,
+    #f0f4f8 100%
+  );
+  color: var(--testimonials-navy);
+}
+
+/* BACKGROUND DECORATIONS */
+
+.testimonials-section::before,
+.testimonials-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 560px;
+  height: 240px;
+  border: 26px double rgb(190 204 217 / 20%);
+  border-radius: 50%;
+}
+
+.testimonials-section::before {
+  left: -250px;
+  bottom: -140px;
+  transform: rotate(18deg);
+}
+
+.testimonials-section::after {
+  right: -280px;
+  top: -110px;
+  transform: rotate(-24deg);
+}
+
+/* MAIN CONTAINER */
+
+.testimonials-container {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: min(calc(100% - 48px), 1320px);
+  margin-inline: auto;
+}
+
+/* SECTION HEADING */
+
+.testimonials-header {
+  text-align: center;
+}
+
+.testimonials-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 12px;
+  color: var(--testimonials-navy);
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.testimonials-eyebrow::before,
+.testimonials-eyebrow::after {
+  content: "";
+  width: 46px;
+  height: 3px;
+  background: var(--testimonials-orange);
+}
+
+.testimonials-title {
+  margin: 0;
+  color: var(--testimonials-navy);
+  font-size: clamp(2.1rem, 3.6vw, 3.6rem);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.testimonials-title span {
+  color: #ff6812;
+}
+
+.testimonials-intro {
+  max-width: 920px;
+  margin: 12px auto 0;
+  color: #30455e;
+  font-size: clamp(0.9rem, 1.2vw, 1.12rem);
+  line-height: 1.5;
+}
+
+/* CAROUSEL ARROWS */
+
+.testimonials-navigation {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 12px 0 10px;
+}
+
+.testimonials-arrow {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #e4eaf0;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--testimonials-navy);
+  font: inherit;
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.testimonials-arrow:not(:disabled):hover {
+  border-color: var(--testimonials-orange);
+  background: var(--testimonials-orange);
+  color: #ffffff;
+}
+
+.testimonials-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.testimonials-arrow:focus-visible,
+.testimonials-dot:focus-visible {
+  outline: 3px solid #0b9e98;
+  outline-offset: 3px;
+}
+
+/* CAROUSEL VIEWPORT AND TRACK */
+
+.testimonials-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonials-grid {
+  display: flex;
+  align-items: stretch;
+  gap: var(--testimonials-gap);
+  margin: 0;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.testimonial-card {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0
+    calc(
+      (100% - (var(--testimonials-visible) - 1) * var(--testimonials-gap)) /
+        var(--testimonials-visible)
+    );
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(20px, 2vw, 30px);
+  border: 1px solid #e7edf3;
+  border-radius: 26px;
+  background: rgb(255 255 255 / 97%);
+  box-shadow: 0 12px 30px rgb(12 35 62 / 9%);
+}
+
+/* CUSTOMER IMAGE AND RATING */
+
+.testimonial-card-top {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.5vw, 22px);
+}
+
+.testimonial-avatar {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(82px, 7vw, 110px);
+  height: clamp(82px, 7vw, 110px);
+  border: 3px solid var(--testimonials-orange);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonial-stars {
+  min-width: 0;
+  color: var(--testimonials-orange);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  letter-spacing: 0.025em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* REVIEW TEXT */
+
+.testimonial-quote {
+  position: relative;
+  flex: 1;
+  margin: clamp(18px, 2.4vh, 28px) 0;
+  padding: 0 12px 0 22px;
+  color: #142b48;
+  font-size: clamp(0.95rem, 1.12vw, 1.1rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.testimonial-quote::before {
+  content: "“";
+  position: absolute;
+  left: -2px;
+  top: -14px;
+  color: #ffc99c;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+.testimonial-quote::after {
+  content: "”";
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  color: #ffc99c;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* CUSTOMER DETAILS AND BRAND */
+
+.testimonial-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #e4eaf0;
+}
+
+.testimonial-customer {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-customer h3 {
+  margin: 0 0 6px;
+  color: var(--testimonials-navy);
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.testimonial-customer p {
+  margin: 0;
+  color: #263d57;
+  font-size: clamp(0.72rem, 0.9vw, 0.9rem);
+  line-height: 1.35;
+}
+
+.testimonial-customer p span {
+  margin-right: 5px;
+  color: var(--testimonials-orange);
+  font-size: 0.9rem;
+}
+
+.testimonial-brand {
+  display: flex;
+  flex: 0 0 35%;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 46px;
+  padding-left: 12px;
+  border-left: 1px solid #bdc8d5;
+}
+
+.testimonial-brand img {
+  display: block;
+  width: 100%;
+  max-width: 135px;
+  max-height: 52px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* POSITION DOTS */
+
+.testimonials-dots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.testimonials-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  transition:
+    width 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.testimonials-dot.is-active {
+  width: 27px;
+  border-radius: 10px;
+  background: var(--testimonials-orange);
+}
+
+/* ACCESSIBLE STATUS TEXT */
+
+.testimonials-section .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-grid,
+  .testimonials-arrow,
+  .testimonials-dot {
+    transition: none;
+  }
+}
+
+/* =================================================
+   08. CUSTOMER TESTIMONIALS SECTION ENDED
+================================================== */
+
+/* =================================================
+   09. CONTACT / CTA SECTION STARTED
+================================================== */
+
+.contact-section {
+  --contact-navy: #0b2340;
+  --contact-orange: #ff7108;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100dvh - 88px);
+  padding: clamp(18px, 2.5vh, 32px) 0;
+  background: radial-gradient(
+    ellipse at center top,
+    #ffffff 0%,
+    #f7f9fc 70%,
+    #edf2f8 100%
+  );
+  color: var(--contact-navy);
+}
+
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  height: 230px;
+  border: 22px double rgb(190 204 217 / 20%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-section::before {
+  left: -290px;
+  bottom: -135px;
+  transform: rotate(25deg);
+}
+
+.contact-section::after {
+  right: -300px;
+  top: 20px;
+  transform: rotate(-35deg);
+}
+
+.contact-container {
+  width: min(calc(100% - 48px), 1320px);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.contact-header {
+  text-align: center;
+}
+
+.contact-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 10px;
+  color: var(--contact-navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-eyebrow::before,
+.contact-eyebrow::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: var(--contact-orange);
+}
+
+.contact-title {
+  margin: 0;
+  color: var(--contact-navy);
+  font-size: clamp(2.1rem, 3.6vw, 3.6rem);
+  font-weight: 850;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.contact-title span {
+  color: #ff6812;
+}
+
+.contact-intro {
+  margin: 10px auto 0;
+  max-width: 950px;
+  color: #30455e;
+  font-size: clamp(0.9rem, 1.15vw, 1.1rem);
+  line-height: 1.45;
+}
+
+/* MAIN TWO-COLUMN PANEL */
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.83fr) minmax(0, 1.17fr);
+  align-items: stretch;
+  gap: clamp(22px, 2.5vw, 38px);
+  margin-top: clamp(20px, 3vh, 30px);
+  padding: clamp(16px, 1.8vw, 26px);
+  border: 1px solid #e6edf3;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgb(12 35 62 / 11%);
+}
+
+/* LEFT CONTACT INFORMATION */
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(18px, 2vw, 28px);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #09223d, #0e304f);
+  color: #fff;
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 0;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(255 255 255 / 18%);
+}
+
+.contact-info-item:first-child {
+  padding-top: 0;
+}
+
+.contact-info-item:last-child {
+  border-bottom: 0;
+}
+
+.contact-info-icon {
+  display: grid;
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #ff8b12, #ff6300);
+  color: #fff;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contact-info-item h3 {
+  margin: 0 0 3px;
+  color: #fff;
+  font-size: clamp(0.95rem, 1.25vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.contact-info-item p,
+.contact-info-item a {
+  margin: 0;
+  color: #edf4fa;
+  font-size: clamp(0.8rem, 0.98vw, 0.98rem);
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.contact-info-item a {
+  text-decoration: none;
+}
+
+.contact-info-item a:hover {
+  color: #ffb779;
+}
+
+.contact-map {
+  overflow: hidden;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.contact-map img {
+  display: block;
+  width: 100%;
+  height: clamp(145px, 18vh, 200px);
+  border-radius: 17px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* RIGHT RENTAL INQUIRY FORM */
+
+.contact-form-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 6px 2px;
+}
+
+.contact-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(14px, 2vh, 22px);
+}
+
+.contact-form-car {
+  flex: 0 0 58px;
+  color: var(--contact-orange);
+}
+
+.contact-form-car svg {
+  display: block;
+  width: 58px;
+  height: 58px;
+}
+
+.contact-form-heading h3 {
+  margin: 0 0 3px;
+  color: var(--contact-navy);
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: 850;
+  line-height: 1.15;
+}
+
+.contact-form-heading p {
+  margin: 0;
+  color: #43556b;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  line-height: 1.4;
+}
+
+.contact-enquiry-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 22px;
+  row-gap: clamp(12px, 1.6vh, 18px);
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 6px;
+}
+
+.contact-field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  color: var(--contact-navy);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.contact-field label span {
+  color: var(--contact-orange);
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1.5px solid #c9d3de;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--contact-navy);
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.contact-field input,
+.contact-field select {
+  height: 42px;
+  padding: 0 13px;
+}
+
+.contact-field textarea {
+  min-height: 70px;
+  padding: 11px 13px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: var(--contact-orange);
+  box-shadow: 0 0 0 3px rgb(255 113 8 / 12%);
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #7a8798;
+  opacity: 1;
+}
+
+.contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 50px;
+  margin-top: auto;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 11px;
+  background: linear-gradient(90deg, #ff7608, #ff6500);
+  color: #fff;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    filter 0.2s,
+    transform 0.2s;
+}
+
+.contact-submit:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.contact-submit:focus-visible {
+  outline: 3px solid #0b2340;
+  outline-offset: 3px;
+}
+
+.contact-submit span {
+  font-size: 1.25rem;
+}
+
+.contact-form-status {
+  margin: 10px 0 0;
+  color: #9b3a0b;
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.contact-form-status[hidden] {
+  display: none;
+}
+
+/* ==================================================
+   07–09. DESKTOP SECTION HEIGHT OPTIMIZATION STARTED
+================================================== */
+
+@media (min-width: 1101px) {
+  /* 07. PRICING */
+  #pricing {
+    padding-block: 12px;
+  }
+
+  #pricing .pricing-container {
+    transform: none;
+  }
+
+  #pricing .pricing-features {
+    gap: 6px;
+    margin-block: 10px 12px;
+  }
+
+  #pricing .pricing-button {
+    min-height: 42px;
+    padding-block: 8px;
+  }
+
+  /* 08. TESTIMONIALS */
+  #testimonials {
+    padding-block: 20px 12px;
+  }
+
+  #testimonials .testimonials-eyebrow {
+    margin-bottom: 8px;
+  }
+
+  #testimonials .testimonials-intro {
+    margin-top: 8px;
+  }
+
+  #testimonials .testimonials-navigation {
+    margin-block: 8px;
+  }
+
+  #testimonials .testimonials-dots {
+    margin-top: 12px;
+  }
+
+  /* 09. CONTACT */
+  #contact {
+    padding-block: 10px;
+  }
+
+  #contact .contact-eyebrow {
+    margin-bottom: 6px;
+  }
+
+  #contact .contact-intro {
+    margin-top: 6px;
+  }
+
+  #contact .contact-panel {
+    margin-top: 12px;
+    padding: 14px;
+  }
+
+  #contact .contact-information {
+    padding: 16px 20px;
+  }
+
+  #contact .contact-info-item {
+    padding-block: 6px;
+  }
+
+  #contact .contact-map {
+    padding-top: 8px;
+  }
+
+  #contact .contact-map img {
+    height: clamp(110px, 14dvh, 145px);
+  }
+
+  #contact .contact-form-heading {
+    margin-bottom: 10px;
+  }
+
+  #contact .contact-fields {
+    row-gap: 8px;
+  }
+
+  #contact .contact-field {
+    gap: 4px;
+  }
+
+  #contact .contact-field input,
+  #contact .contact-field select {
+    height: 38px;
+  }
+
+  #contact .contact-field textarea {
+    min-height: 58px;
+  }
+
+  #contact .contact-submit {
+    min-height: 44px;
+    padding-block: 8px;
+  }
+}
+
+/* Desktop vertical positioning */
+@media (min-width: 1101px) {
+  .testimonials-section {
+    padding-top: clamp(70px, 8.5vh, 90px);
+  }
+}
+/* ==================================================
+   07–09. DESKTOP SECTION HEIGHT OPTIMIZATION ENDED
+================================================== */
+
+/* ==================================================
+   09. CONTACT — DESKTOP VERTICAL ALIGNMENT STARTED
+================================================== */
+
+@media (min-width: 1101px) {
+  #contact {
+    padding-top: 28px;
+    padding-bottom: 0;
+  }
+}
+
+/* ==================================================
+   09. CONTACT — DESKTOP VERTICAL ALIGNMENT ENDED
+================================================== */
+
+/* ==================================================
+   07–08. DESKTOP CONTENT POSITION FIX STARTED
+================================================== */
+
+@media (min-width: 1101px) {
+  #pricing.pricing-section {
+    padding-top: 22px !important;
+  }
+
+  #pricing .pricing-container {
+    transform: translateY(12px) !important;
+  }
+
+  #testimonials.testimonials-section {
+    padding-top: 22px !important;
+  }
+
+  #testimonials .testimonials-container {
+    transform: translateY(45px) !important;
+  }
+}
+
+/* ==================================================
+   07–08. DESKTOP CONTENT POSITION FIX ENDED
+================================================== */
+
+/* =================================================
+   09. CONTACT / CTA SECTION ENDED
+================================================== */
